@@ -1,0 +1,3 @@
+[submodule "mobileQuiz"]
+	path = mobileQuiz
+	url = https://github.com/gsgomes/mobileQuiz
