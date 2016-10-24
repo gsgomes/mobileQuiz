@@ -14,6 +14,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
+/**
+ * Created by Gustavo on 22/10/2016.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     List<Question> quesList;
@@ -47,16 +51,16 @@ public class MainActivity extends AppCompatActivity {
                 if(currentQ.getANSWER().equals(answer.getText()))
                 {
                     score++;
-                    Log.d("score", "Your score"+score);
+                    Log.d("score", "Sua pontuação: "+score);
                 }
-                if(qid<5){
+                if(qid<30){
                     currentQ=quesList.get(qid);
                     setQuestionView();
                 }else{
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle b = new Bundle();
-                    b.putInt("score", score); //Your score
-                    intent.putExtras(b); //Put your score to your next Intent
+                    b.putInt("score", score); //Score
+                    intent.putExtras(b); //Coloca o score na outra intent
                     startActivity(intent);
                     finish();
                 }
@@ -66,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }

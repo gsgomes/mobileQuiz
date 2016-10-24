@@ -11,8 +11,8 @@ public class Question {
     private String OPTB;
     private String OPTC;
     private String ANSWER;
-    public Question()
-    {
+
+    public Question() {
         ID=0;
         QUESTION="";
         OPTA="";
@@ -20,16 +20,17 @@ public class Question {
         OPTC="";
         ANSWER="";
     }
-    public Question(String qUESTION, String oPTA, String oPTB, String oPTC, String aNSWER) {
 
+    public Question(String qUESTION, String oPTA, String oPTB, String oPTC, String aNSWER) {
         QUESTION = qUESTION;
         OPTA = oPTA;
         OPTB = oPTB;
         OPTC = oPTC;
         ANSWER = aNSWER;
 
-        //GETS
     }
+
+    //GETS
     public int getID()
     {
         return ID;
